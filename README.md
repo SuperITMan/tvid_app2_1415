@@ -20,8 +20,10 @@ de savoir ce qu'il reste à faire.
 
 ### [Rapport client]
 * /
+
 ### [Réponses au questionnaire-guide]
 * /
+
 ### [Compte-rendu et pistes d'améliorations]
 * /
 
