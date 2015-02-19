@@ -8,6 +8,7 @@ Group documents for the app2 - TVID courses - Ephec 1415
 Pour éviter de créer des problèmes et améliorer l'expérience générale, lisez
 ces lignes attentivement.
 
+* Sauvegardez vos liens pour la bibliographie.
 * Ne jamais commit sur Master.
 * Travaillez toujours sur votre branche.
 * Travaillez en ligne de commande.
