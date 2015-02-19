@@ -99,6 +99,18 @@ Code structure by Virginie Van den Schriek
 					\item On obtient donc un signal sonore numérisé d'un débit binaire de :
 						Taux d'échantillonnage * Codage = \begin{equation} 8000 \ast 8 = 64Kbps \end{equation}.
 				\end{itemize}
+			Les paramètres qui vont influencer la qualité de la communication au niveau du signal sont la bande-passante
+			allouée au dit signal (et donc le taux d'échantillonnage) et le nombre de bits sur lequel les échantillons
+			vont être codés. Plus ces valeurs seront élevées plus le signal numérique sera proche de l'original
+			analogique, mais plus le signal sera "lourd".
+			Le débit est le résultat de l'équation suivante :
+			\begin{equation} Débit = \frac{(Taux d'échantillonnage * Nombre de bits * Nombre de voies)}{Type de compression}\end{equation}
+			Le taux d'échantillonnage représente la qualité du son (Radio 22.05KHz, CD 44.1KHz, Téléphone 8KHz).
+			Le nombre de voies indique le type mono(Une voie), stéréo (Deux voies), etc.
+			Un dernier paramètre est le type de compression, tel MP3 qui va réduire de 12 à 200 fois le débit.
+
+
+			\item[6.1.1.2]s
 
 		\end{description}
 \end{document}
