@@ -110,7 +110,18 @@ Code structure by Virginie Van den Schriek
 			Un dernier paramètre est le type de compression, tel MP3 qui va réduire de 12 à 200 fois le débit.
 
 
-			\item[6.1.1.2]s
+			\item[Lors de i'\textbf{échantillonnage}, une contrainte physique doit être prise en compte pour
+			éviter des distorsions. Quelle est-elle? Enoncez le principe qui l'explicite. Que risque-t-on si
+			elle n'est pas respectée?]
+			C'est le théorème, cité précédemment, de Shannon-Nyquist :
+				\begin{quotation}
+				La représentation discrète d'un signal par des échantillons régulièrement espacés exige une 
+				fréquence d'échantillonnage supérieure au double de la fréquence maximale présente dans ce signal.
+				\end{quotation}
+			Si ce principe n'est pas respecté lors de l'échantillonnage, les copies ajacentes au signal (Transformées 
+			de Fourrier) vont se chevaucher et altérer le son produit.
+
+			\item[6.1.1.3] N
 
 		\end{description}
 \end{document}
