@@ -15,6 +15,7 @@ Code structure by Virginie Van den Schriek
 \usepackage{url}
 \usepackage[normalem]{ulem}
 \usepackage{enumitem}
+\usepackage{mathtools}
 
 
 % Margins
@@ -57,7 +58,7 @@ Code structure by Virginie Van den Schriek
 		\rule{15cm}{1pt}
 		\medskip
 		Réponses aux questionnaire-guide \\
-		\huge APP1 : Transmission de données\\ 
+		\huge APP2 : VoIP(1)\\
 		\vspace{.5cm}
 		%\Large Enoncé destiné aux 2TL1\\ [-2mm]
 		\rule{15cm}{1pt}
@@ -84,9 +85,20 @@ Code structure by Virginie Van den Schriek
 			\item[Comment la voix est-elle numérisée? Indiquer les différentes
 			étapes. Quels paramètres vont influencer la qualité de la communication?
 			Quel débit obtient-on, en fonction de différents cas de figure (téléphonie,
-			MP3 vs Hi-Fi, mono vs stéréo, etc )? Expliquer les calculs.] Answer :
+			MP3 vs Hi-Fi, mono vs stéréo, etc )? Expliquer les calculs.]
+			Numérisation d'un signal audio : 
+				begin{itemize}
+					\item La voix constitue un signal \textbf{analogique}.
+					\item Ce signal est ensuite échantillonné selon Shannon-Nyquist. Par exemple
+					pour un signal de qualité téléphonique, la bande-passante du signal est de 4KHz,
+					donc la fréquence d'échantillonnage doit être de 2*4000Hz(Shannon-Nyquist).
+					On a donc un taux de 8000 échantillons/seconde.
+					\item Ensuite le signal échantillonné est quantifié pour attribuer un code
+					binaire à chaque échantillon, typiquement on quantifiera ce signal sur 8 bits,
+					ce qui offre \begin{equation} 2^8 = 256 \end{equation} valeurs possibles.
+					\item On obtient donc un signal sonore numérisé d'un débit binaire de :
+						Taux d'échantillonnage * Codage = \begin{equation} 8000 \ast 8 = 64Kbps \end{equation}.
+				\end{itemize}
 
 		\end{description}
 \end{document}
-
-
