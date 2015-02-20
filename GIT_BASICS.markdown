@@ -14,10 +14,9 @@ L'option Git Bash vous fera apparaître une console Git positionnée à l'endroi
 
 Avant toute chose il faut configurer Git avec votre identité, entrez les commandes suivantes : 
 
-    ```git
     git config --global user.name "John McKek"
 	git config --global user.email johnkek@example.com
-	```
+	
 
 Positionnez-vous dans un dossier qui va accueillir le dossier du projet, "Documents" par exemple.
 
