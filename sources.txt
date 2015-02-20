@@ -1,0 +1,7 @@
+Bibliographie
+
+http://www.memoireonline.com/08/11/4644/m_Etude-et-mise-au-point-dun-systeme-de-communication-VOIP--application-sur-un-PABX-IP-open-source8.html
+http://monge.univ-mlv.fr/~dr/XPOSE2008/touali_VoIP/numerisation.voix.php
+http://guidespratiques.traduc.org/vf/VoIP-HOWTO.html#N100F0
+http://www.commentcamarche.net/contents/81-le-son-numerique
+http://nigelcoldwell.co.uk/audio/
