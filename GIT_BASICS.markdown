@@ -2,14 +2,14 @@
 
 ## Installation
 Je présume que vous travaillez sous Windows, si pas vous savez certainement mieux que moi comment installer des paquets sur votre \*NIX.
-Pour commencer pas de SourceTree ou autre crapulerie, Git fournit un programme formidable que vous pourrez vous procurer ici : 
-[http://git-scm.com/downloads]
-Installer le tout en gardant les paramètres par défaut.
+Pour commencer pas de SourceTree ou autre crapulerie, Git fournit un programme formidable que vous pourrez vous procurer ici :  
+[http://git-scm.com/downloads]  
+Installez-le tout en gardant les paramètres par défaut.
 
 ## Utilisation
-Une fois installé, lors d'un clic droit daes votre espace de travail, le menu contextuel doit vous présenter les options suivantes : 
+Une fois installé, lors d'un clic droit daes votre espace de travail, le menu contextuel doit vous présenter les options suivantes :  
 
-L'option Git Bash vous fera apparaître une console Git positionnée à l'endroit où vous avez lancé ce Bash.
+L'option Git Bash vous fera apparaître une console Git positionnée à l'endroit où vous avez lancé ce Bash.  
 (Vous pouvez utiliser "cd" pour naviguer dans l'arborescence.)
 
 Avant toute chose il faut configurer Git avec votre identité, entrez les commandes suivantes : 
