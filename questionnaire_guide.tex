@@ -121,7 +121,26 @@ Code structure by Virginie Van den Schriek
 			Si ce principe n'est pas respecté lors de l'échantillonnage, les copies ajacentes au signal (Transformées 
 			de Fourrier) vont se chevaucher et altérer le son produit.
 
-			\item[6.1.1.3] N
+			\item[De la \textbf{compression} peut être utilisée pour réduire la bande passante. Comment réaliser cette
+			compression dans le cas des transmissions vocales?]
+			Cette compression est réalisée via des \textbf{Codecs} (Codeur/Décodeur), qui sont des programmes de compression qui
+			encodent le signal vocal en données digitales compressées pour l'envoi et décompressées au niveau du récepteur.
+
+			\item[Listez quelques standards pour l'\textbf{encodage} de la voix, en mentionnant leurs
+			caractéristiques respectives]
+			\begin{table}[h]
+			\begin{tabular}{lll}
+			\textbf{Codec} & \textbf{Bande Passante(Kbps)} & \textbf{Description}                                               \\
+			G.711          & 64                            & Offre une transmission précise de la parole.                       \\
+			G.722          & 48/56/64                      & Adaptation du taux de compression en cas de congestion réseau.     \\
+			G.723.1        & 5.3/6.3                       & Haut taux de compression avec une bonne qualité audio.             \\
+			G.726          & 16/24/32/40                   & Version améliorée du G.721                                         \\
+			G.729          & 8                             & Bonne utilisation de la bande, tolérant aux erreurs.               \\
+			GSM            & 13                            & Haut taux de compression, utilisé dans les téléphones cellulaires. \\
+			iLBC           & 15                            & Gratuit, robuste face aux pertes.                                  \\
+			Speex          & 2.15/44                       & Minimise l'utilisation de la bande avec un débit variable.        
+			\end{tabular}
+			\end{table}
 
 		\end{description}
 \end{document}
