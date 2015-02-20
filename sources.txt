@@ -5,3 +5,7 @@ http://monge.univ-mlv.fr/~dr/XPOSE2008/touali_VoIP/numerisation.voix.php
 http://guidespratiques.traduc.org/vf/VoIP-HOWTO.html#N100F0
 http://www.commentcamarche.net/contents/81-le-son-numerique
 http://nigelcoldwell.co.uk/audio/
+
+http://voip.about.com/od/voipbasics/a/voipcodecs.htm
+http://www.cisco.com/cisco/web/support/CA/fr/109/1093/1093465_codec_complexity.html
+http://voip.about.com/od/voipbasics/a/compression.htm
