@@ -1,0 +1,157 @@
+Code structure by Virginie Van den Schriek
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+\documentclass[a4paper,10pt,final,fleqn]{article}
+\usepackage[frenchb]{babel}
+\usepackage{fontenc}
+\usepackage{fancyhdr} % Required for custom headers
+\usepackage{lastpage} % Required to determine the last page for the footer
+\usepackage{extramarks} % Required for headers and footers
+\usepackage{graphicx} % Required to insert images
+\usepackage[utf8]{inputenc}
+\usepackage{apacite}
+\usepackage{url}
+\usepackage[normalem]{ulem}
+\usepackage{enumitem}
+\usepackage{mathtools}
+
+
+% Margins
+%\topmargin=-0.45in
+\evensidemargin=0in
+\oddsidemargin=0in
+\textwidth=6in
+\textheight=9.0in
+\headsep=0.25in 
+
+%\linespread{1.1} % Line spacing
+
+% Set up the header and footer
+\pagestyle{fancy}
+\lhead{\AuthorName} % Top left header
+\chead{\Course} % Top center header
+\rhead{\Date} % Top right header
+\lfoot{\lastxmark} % Bottom left footer
+\cfoot{} % Bottom center footer
+\rfoot{\ \thepage\ / 	\pageref{LastPage}} % Bottom right footer
+\renewcommand\headrulewidth{0.4pt} % Size of the header rule
+\renewcommand\footrulewidth{0.4pt} % Size of the footer rule
+
+
+
+%\setlength\parindent{0pt} % Removes all indentation from 
+\setcounter{tocdepth}{2}
+
+
+\newcommand{\Course}{EPHEC} % Course/class
+\newcommand{\AuthorName}{Groupe 2.x} % Your name
+\newcommand{\Date}
+
+\title{
+\parbox{15cm}
+{\includegraphics[width=4cm]{ephec.png} \\ 
+  Louvain-la-neuve\\
+    \vspace{3cm}
+	\begin{center}\sf\bfseries\Huge
+		\rule{15cm}{1pt}
+		\medskip
+		Réponses aux questionnaire-guide \\
+		\huge APP2 : VoIP(1)\\
+		\vspace{.5cm}
+		%\Large Enoncé destiné aux 2TL1\\ [-2mm]
+		\rule{15cm}{1pt}
+	\end{center}
+	\vspace{3cm}
+}} 
+
+\author{Ramiro-Gonzalez, De Mets, Vergotte, Goerges, Monroe} \date{\today}
+
+
+\begin{document}
+\thispagestyle{empty}
+
+\maketitle
+
+\newpage
+
+\section{Recherche Théorique}
+	
+	\subsection{Transmissions vocales}
+		
+		\begin{description}[style=nextline]
+
+			\item[Comment la voix est-elle numérisée? Indiquer les différentes
+			étapes. Quels paramètres vont influencer la qualité de la communication?
+			Quel débit obtient-on, en fonction de différents cas de figure (téléphonie,
+			MP3 vs Hi-Fi, mono vs stéréo, etc )? Expliquer les calculs.]
+			Numérisation d'un signal audio : 
+				begin{itemize}
+					\item La voix constitue un signal \textbf{analogique}.
+					\item Ce signal est ensuite échantillonné selon Shannon-Nyquist. Par exemple
+					pour un signal de qualité téléphonique, la bande-passante du signal est de 4KHz,
+					donc la fréquence d'échantillonnage doit être de 2*4000Hz(Shannon-Nyquist).
+					On a donc un taux de 8000 échantillons/seconde.
+					\item Ensuite le signal échantillonné est quantifié pour attribuer un code
+					binaire à chaque échantillon, typiquement on quantifiera ce signal sur 8 bits,
+					ce qui offre \begin{equation} 2^8 = 256 \end{equation} valeurs possibles.
+					\item On obtient donc un signal sonore numérisé d'un débit binaire de :
+						Taux d'échantillonnage * Codage = \begin{equation} 8000 \ast 8 = 64Kbps \end{equation}.
+				\end{itemize}
+			Les paramètres qui vont influencer la qualité de la communication au niveau du signal sont la bande-passante
+			allouée au dit signal (et donc le taux d'échantillonnage) et le nombre de bits sur lequel les échantillons
+			vont être codés. Plus ces valeurs seront élevées plus le signal numérique sera proche de l'original
+			analogique, mais plus le signal sera "lourd".
+			Le débit est le résultat de l'équation suivante :
+			\begin{equation} Débit = \frac{(Taux d'échantillonnage * Nombre de bits * Nombre de voies)}{Type de compression}\end{equation}
+			Le taux d'échantillonnage représente la qualité du son (Radio 22.05KHz, CD 44.1KHz, Téléphone 8KHz).
+			Le nombre de voies indique le type mono(Une voie), stéréo (Deux voies), etc.
+			Un dernier paramètre est le type de compression, tel MP3 qui va réduire de 12 à 200 fois le débit.
+
+
+			\item[Lors de i'\textbf{échantillonnage}, une contrainte physique doit être prise en compte pour
+			éviter des distorsions. Quelle est-elle? Enoncez le principe qui l'explicite. Que risque-t-on si
+			elle n'est pas respectée?]
+			C'est le théorème, cité précédemment, de Shannon-Nyquist :
+				\begin{quotation}
+				La représentation discrète d'un signal par des échantillons régulièrement espacés exige une 
+				fréquence d'échantillonnage supérieure au double de la fréquence maximale présente dans ce signal.
+				\end{quotation}
+			Si ce principe n'est pas respecté lors de l'échantillonnage, les copies adjacentes au signal (Transformées 
+			de Fourrier) vont se chevaucher et altérer le son produit.
+
+			\item[De la \textbf{compression} peut être utilisée pour réduire la bande passante. Comment réaliser cette
+			compression dans le cas des transmissions vocales?]
+			Cette compression est réalisée via des \textbf{Codecs} (Codeur/Décodeur), qui sont des programmes de compression qui
+			encodent le signal vocal en données digitales compressées pour l'envoi et décompressées au niveau du récepteur.
+
+			\item[Listez quelques standards pour l'\textbf{encodage} de la voix, en mentionnant leurs
+			caractéristiques respectives]
+			\begin{table}[h]
+			\begin{tabular}{lll}
+			\textbf{Codec} & \textbf{Bande Passante(Kbps)} & \textbf{Description}                                               \\
+			G.711          & 64                            & Offre une transmission précise de la parole.                       \\
+			G.722          & 48/56/64                      & Adaptation du taux de compression en cas de congestion réseau.     \\
+			G.723.1        & 5.3/6.3                       & Haut taux de compression avec une bonne qualité audio.             \\
+			G.726          & 16/24/32/40                   & Version améliorée du G.721                                         \\
+			G.729          & 8                             & Bonne utilisation de la bande, tolérant aux erreurs.               \\
+			GSM            & 13                            & Haut taux de compression, utilisé dans les téléphones cellulaires. \\
+			iLBC           & 15                            & Gratuit, robuste face aux pertes.                                  \\
+			Speex          & 2.15/44                       & Minimise l'utilisation de la bande avec un débit variable.        
+			\end{tabular}
+			\end{table}
+
+			\item[Quels sont les besoins d'une transmission vocale à travers un réseau? Quelle bande-passante va-t-elle occuper(fixe, variable)?
+			Est-elle sensible aux pertes? au délai? au jitter? Quel \textbf{protocole de transport} sera le plus adapté à ce type de transmission?]
+
+
+			\item[Quelle sera la différence entre une transmission de type streaming audio et une transmission de type
+			téléphonie sur internet? Quel mécanisme peut-on utiliser dans un cas mais pas dans l'autre pour contrer certaines
+			imperfections du réseau IP?]
+
+		\end{description}
+
+	\subsection{Infrastructure réseau et technologie d'accès.}
+	
+\end{document}

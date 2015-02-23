@@ -8,6 +8,7 @@ Group documents for the app2 - TVID courses - Ephec 1415
 Pour éviter de créer des problèmes et améliorer l'expérience générale, lisez
 ces lignes attentivement.
 
+* Sauvegardez vos liens pour la bibliographie.
 * Ne jamais commit sur Master.
 * Travaillez toujours sur votre branche.
 * Travaillez en ligne de commande.
@@ -33,3 +34,5 @@ de savoir ce qu'il reste à faire.
 Vous trouverez dans les fichiers sur Master un petit tutoriel que j'ai créé 
 très simple pour vous lancer, cela nécéssite moins d'une dizaine de commandes
 similaires à apprendre et vous fournira une base pour travailler agréablement.
+
+![alt_text](https://github.com/srozen/tvid_app2_1415/blob/work_srozen/GIT_BASICS.markdown)
