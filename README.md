@@ -35,4 +35,4 @@ Vous trouverez dans les fichiers sur Master un petit tutoriel que j'ai créé
 très simple pour vous lancer, cela nécéssite moins d'une dizaine de commandes
 similaires à apprendre et vous fournira une base pour travailler agréablement.
 
-![alt_text](https://github.com/srozen/tvid_app2_1415/blob/work_srozen/GIT_BASICS.markdown)
+[https://github.com/srozen/tvid_app2_1415/blob/work_srozen/GIT_BASICS.markdown]
