@@ -10,7 +10,9 @@ Installez-le tout en gardant les paramètres par défaut.
 Une fois installé, lors d'un clic droit daes votre espace de travail, le menu contextuel doit vous présenter les options suivantes :  
 
 L'option Git Bash vous fera apparaître une console Git positionnée à l'endroit où vous avez lancé ce Bash.  
-(Vous pouvez utiliser "cd" pour naviguer dans l'arborescence.)
+(Vous pouvez utiliser "cd" pour naviguer dans l'arborescence.)    
+
+![alt text]()
 
 Avant toute chose il faut configurer Git avec votre identité, entrez les commandes suivantes : 
 
