@@ -27,6 +27,7 @@ Positionnez-vous dans un dossier qui va accueillir le dossier du projet, "Docume
 --------------------------
 ## Cycle de fonctionnement
 1. **git checkout master** Pour vous positionner sur Master
+    **git checkout master**
 2. **git pull** Pour intégrer les changements sur Master
 3. **git checkout votre_branche** Pour revenir sur votre branche
 4. **git merge master** Pour transposer les changements de Master sur votre
