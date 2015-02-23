@@ -12,7 +12,7 @@ Une fois installé, lors d'un clic droit daes votre espace de travail, le menu c
 L'option Git Bash vous fera apparaître une console Git positionnée à l'endroit où vous avez lancé ce Bash.  
 (Vous pouvez utiliser "cd" pour naviguer dans l'arborescence.)    
 
-![alt text]()
+![alt text](https://github.com/srozen/tvid_app2_1415/blob/work_srozen/images/gitconfig.PNG)
 
 Avant toute chose il faut configurer Git avec votre identité, entrez les commandes suivantes : 
 
