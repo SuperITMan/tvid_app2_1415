@@ -38,11 +38,16 @@ Lancez un git bash dans le dossier __tvid_app2_1415__ .
 Maintenant, votre prompt vous dis normalement que vous êtes sur Master.   
 
 Pour savoir sur quelle branche vous êtes:
+
     git branch
-Pour changer de branche et vous déplacer sur Master (Le tronc commun), faites :   
-    git checkout master
+
+Pourchanger de branche et vous déplacer sur Master (Le tronc commun), faites :   
+    
+	git checkout master
+
 Ensuite, pour télécharger la toute dernière version de Master :   
-    git pull
+    
+	git pull
 
 ![alt_text](https://github.com/srozen/tvid_app2_1415/blob/work_srozen/images/gitupdate.PNG)
 
